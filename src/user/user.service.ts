@@ -42,4 +42,18 @@ export class UserService {
         return from(this.userRepository.find());
     }
 
+    findUsername(email:string) {
+        return this.userRepository.findOneBy({ email });
+    }
+
 }
+
+
+
+
+
+
+
+
+
+

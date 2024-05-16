@@ -9,4 +9,8 @@ export class BcryptService {
         return hash;
     }
 
+    async compare(password:string,hash:string) {
+        return bcrypt.compare(password,hash)
+    }
+
 }
