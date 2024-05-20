@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './entities/user.entity';
@@ -17,6 +17,7 @@ export class UserController {
         return response;
     }
 
+    @Get()
     findAll(): Observable<User[]> {
         return this.userService.findAll();
     }

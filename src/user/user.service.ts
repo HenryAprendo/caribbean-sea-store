@@ -21,7 +21,7 @@ export class UserService {
         const email = dto.email;
         let user = await this.userRepository.findOneBy({ email });
 
-        if(user && user.email === email){
+        if(user && user.email === email) {
             throw new ExceptionsHandler();
         }
 
@@ -47,13 +47,3 @@ export class UserService {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
